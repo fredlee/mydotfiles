@@ -41,20 +41,16 @@ function! Tabstyle_tabs()
   autocmd User Rails set noexpandtab
 endfunction
 
-"function! Tabstyle_spaces()
+function! Tabstyle_spaces()
   " Use 2 spaces
   set softtabstop=2
   set shiftwidth=2
   set tabstop=2
   set expandtab
-"endfunction
+endfunction
 
-"if hostname() == "Laptop.local"
-"  call Tabstyle_spaces()
-"else
-"  call Tabstyle_tabs() 
-"endif
-"
+call Tabstyle_spaces()
+
 
 " Indenting *******************************************************************
 set ai " Automatically set the indent of a new line (local to buffer)
@@ -88,7 +84,6 @@ set smartcase " Ignore case when searching lowercase
 
 
 " Colors **********************************************************************
-"set t_Co=256 " 256 colors
 set background=dark 
 syntax on " syntax highlighting
 colorscheme ir_black
@@ -97,7 +92,6 @@ colorscheme ir_black
 " Status Line *****************************************************************
 set showcmd
 set ruler " Show ruler
-"set ch=2 " Make command line two lines high
 
 
 " Line Wrapping ***************************************************************
@@ -111,18 +105,6 @@ imap jj <Esc>
 imap uu _
 imap hh =>
 imap aa @
-
-
-" Directories *****************************************************************
-" Setup backup location and enable
-"set backupdir=~/backup/vim
-"set backup
-
-" Set Swap directory
-"set directory=~/backup/vim/swap
-
-" Sets path to directory buffer was loaded from
-"autocmd BufEnter * lcd %:p:h
 
 
 " File Stuff ******************************************************************
