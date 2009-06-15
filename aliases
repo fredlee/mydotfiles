@@ -1,0 +1,5 @@
+alias la="ls -Gla"
+alias ls="ls -G"
+alias ll="ls -Gl"
+alias ~="cd ~"
+alias u="cd .."
