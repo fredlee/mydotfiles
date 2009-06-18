@@ -16,8 +16,11 @@ set nocompatible
 
 let mapleader = ","
 
+
+" Use Ack instead of Grep
 set grepprg=ack
 set grepformat=%f:%l:%m
+
 
 " Tabs ************************************************************************
 " Use 2 spaces
@@ -27,7 +30,6 @@ set shiftwidth=2
 set autoindent
 set expandtab
 set backspace=start,indent
-
 autocmd FileType make     set noexpandtab
 autocmd FileType python   set noexpandtab
 
@@ -46,8 +48,20 @@ set splitbelow splitright
 :noremap ,h :split^M^W^W<cr>
 
 
-" Cursor highlights ***********************************************************
+" Cursor ***********************************************************
 set cursorline
+
+
+"jump to last cursor position when opening a file
+"dont do it when writing a commit log entry
+autocmd BufReadPost * call SetCursorPosition()
+function! SetCursorPosition()
+  if &filetype !~ 'commit\c'
+    if line("'\"") > 0 && line("'\"") <= line("$")
+     exe "normal g`\""
+    endif
+  end
+endfunction
 
 
 " Searching *******************************************************************
@@ -56,8 +70,10 @@ set incsearch  " incremental search, search as you type
 set ignorecase " Ignore case when searching 
 set smartcase " Ignore case when searching lowercase
 
+
 " Press Space to turn off highlighting and clear any message already displayed.
 :noremap <silent> <Space> :silent noh<Bar>echo<CR>
+
 
 " Press F4 to toggle highlighting on/off.
 :noremap <F4> :set hls!<CR>
@@ -100,6 +116,8 @@ set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
 set number " Show line numbers
 set matchpairs+=<:>
 set vb t_vb= " Turn off the bell, this could be more annoying, but I'm not sure how
+set clipboard+=unnamed  " Yanks go on clipboard instead.
+set scrolloff=5 " Keep 5 lines below and above the cursor
 
 
 " Cursor Movement *************************************************************
@@ -119,3 +137,6 @@ let g:fuzzy_matching_limit = 70
 
 map <leader>t :FuzzyFinderTextMate<CR>
 map <leader>b :FuzzyFinderBuffer<CR>
+
+" NERD Tree
+nmap <silent> <Leader>n :NERDTreeToggle<CR>
