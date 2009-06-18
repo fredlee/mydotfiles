@@ -4,61 +4,32 @@
 " |                                                                           |
 " | Some highlights:                                                          |
 " | jj = <esc>  Very useful for keeping your hands on the home row            |
-" | ,n = toggle NERDTree off and on                                           |
-" |                                                                           |
-" | ,f = fuzzy find all files                                                 |
-" | ,b = fuzzy find in all buffers                                            |
-" |                                                                           |
-" | hh = inserts '=>'                                                         |
-" | aa = inserts '@'                                                          |
 " |                                                                           |
 " | ,h = new horizontal window                                                |
 " | ,v = new vertical window                                                  |
 " |                                                                           |
-" | ,f = fuzzy find all files                                                 |
-" | ,b = fuzzy find all buffers                                               |
-" |                                                                           |
 " | enter and shift-enter = adds a new line after and before the current line |
 " |                                                                           |
-" | :call Tabstyle_tabs = set tab to real tabs                                |
-" | :call Tabstyle_spaces = set tab to 2 spaces                               |
 " -----------------------------------------------------------------------------  
 
 set nocompatible
 
+let mapleader = ","
+
+set grepprg=ack
+set grepformat=%f:%l:%m
+
 " Tabs ************************************************************************
-"set sta " a <Tab> in an indent inserts 'shiftwidth' spaces
+" Use 2 spaces
+set tabstop=2
+set smarttab
+set shiftwidth=2
+set autoindent
+set expandtab
+set backspace=start,indent
 
-function! Tabstyle_tabs()
-  " Using 4 column tabs
-  set softtabstop=4
-  set shiftwidth=4
-  set tabstop=4
-  set noexpandtab
-  autocmd User Rails set softtabstop=4
-  autocmd User Rails set shiftwidth=4
-  autocmd User Rails set tabstop=4
-  autocmd User Rails set noexpandtab
-endfunction
-
-function! Tabstyle_spaces()
-  " Use 2 spaces
-  set softtabstop=2
-  set shiftwidth=2
-  set tabstop=2
-  set expandtab
-endfunction
-
-if hostname() == "Laptop.local"
-  call Tabstyle_spaces()
-else
-  call Tabstyle_tabs() 
-endif
-
-
-" Indenting *******************************************************************
-set ai " Automatically set the indent of a new line (local to buffer)
-set si " smartindent	(local to buffer)
+autocmd FileType make     set noexpandtab
+autocmd FileType python   set noexpandtab
 
 
 " Scrollbars ******************************************************************
@@ -77,7 +48,6 @@ set splitbelow splitright
 
 " Cursor highlights ***********************************************************
 set cursorline
-"set cursorcolumn
 
 
 " Searching *******************************************************************
@@ -103,7 +73,6 @@ colorscheme ir_black
 " Status Line *****************************************************************
 set showcmd
 set ruler " Show ruler
-"set ch=2 " Make command line two lines high
 
 
 " Line Wrapping ***************************************************************
@@ -114,28 +83,6 @@ set linebreak  " Wrap at word
 " Mappings ********************************************************************
 " Professor VIM says '87% of users prefer jj over esc', jj abrams strongly disagrees
 imap jj <Esc>
-imap uu _
-imap hh =>
-imap aa @
-
-
-" Directories *****************************************************************
-" Setup backup location and enable
-"set backupdir=~/backup/vim
-"set backup
-
-" Set Swap directory
-"set directory=~/backup/vim/swap
-
-" Sets path to directory buffer was loaded from
-"autocmd BufEnter * lcd %:p:h
-
-
-" File Stuff ******************************************************************
-filetype plugin indent on
-" To show current filetype use: set filetype
-
-"autocmd FileType html :set filetype=xhtml 
 
 
 " Inser New Line **************************************************************
@@ -150,26 +97,9 @@ set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
 
 
 " Misc ************************************************************************
-set backspace=indent,eol,start
 set number " Show line numbers
 set matchpairs+=<:>
 set vb t_vb= " Turn off the bell, this could be more annoying, but I'm not sure how
-
-" Set list Chars - for showing characters that are not
-" normally displayed i.e. whitespace, tabs, EOL
-function! Invisible_chars_show()
-  set listchars=trail:.,tab:>-,eol:$
-  set list
-endfunction
-function! Invisible_chars_hide()
-  set nolist
-endfunction
-
-
-" Mouse ***********************************************************************
-"set mouse=a " Enable the mouse
-"behave xterm
-"set selectmode=mouse
 
 
 " Cursor Movement *************************************************************
@@ -181,81 +111,3 @@ map <down> gj
 map j gj
 imap <down> <C-o>gj
 map E ge
-
-
-" Ruby stuff ******************************************************************
-"compiler ruby         " Enable compiler support for ruby
-"map <F5> :!ruby %<CR>
-
-
-" Omni Completion *************************************************************
-autocmd FileType html :set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete " may require ruby compiled in
-
-
-
-" -----------------------------------------------------------------------------  
-" |                              Pluggins                                     |
-" -----------------------------------------------------------------------------  
-
-" NERDTree ********************************************************************
-:noremap ,n :NERDTreeToggle<CR>
-
-" User instead of Netrw when doing an edit /foobar
-let NERDTreeHijackNetrw=1
-
-" Single click for everything
-let NERDTreeMouseMode=1
-
-
-" SnippetsEmu *****************************************************************
-"imap <unique> <C-j> <Plug>Jumper
-"let g:snip_start_tag = "_\."
-"let g:snip_end_tag = "\._"
-"let g:snip_elem_delim = ":"
-"let g:snip_set_textmate_cp = '1'  " Tab to expand snippets, not automatically.
-
-
-" fuzzyfinder_textmate ********************************************************
-map ,f :FuzzyFinderTextMate<CR>
-map ,b :FuzzyFinderBuffer<CR>
-"let g:fuzzy_ignore = '.o;.obj;.bak;.exe;.pyc;.pyo;.DS_Store;.db'
-
-" autocomplpop ***************************************************************
-" complete option
-"set complete=.,w,b,u,t,k
-"let g:AutoComplPop_CompleteOption = '.,w,b,u,t,k'
-"set complete=.
-let g:AutoComplPop_IgnoreCaseOption = 0
-let g:AutoComplPop_BehaviorKeywordLength = 2
-
-
-
-" -----------------------------------------------------------------------------  
-" |                             OS Specific                                   |
-" |                      (GUI stuff goes in gvimrc)                           |
-" -----------------------------------------------------------------------------  
-
-" Mac *************************************************************************
-"if has("mac") 
-  "" 
-"endif
- 
-" Windows *********************************************************************
-"if has("gui_win32")
-  "" 
-"endif
-
-
-
-" -----------------------------------------------------------------------------  
-" |                               Startup                                     |
-" -----------------------------------------------------------------------------  
-" Open NERDTree on start
-"autocmd VimEnter * exe 'NERDTree' | wincmd l 
