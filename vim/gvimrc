@@ -8,7 +8,7 @@
 if has("gui_macvim")
 
   set fuoptions=maxvert,maxhorz " fullscreen options (MacVim only), resized window when changed to fullscreen
-  set guifont=Anonymous\ Pro:h15
+  set guifont=DejaVu\ Sans\ Mono:h14
   set guioptions-=T  " remove toolbar
   set stal=2 " turn on tabs by default
 
@@ -27,8 +27,8 @@ set anti " Antialias font
 "set transparency=0
 
 " Default size of window
-set columns=156 
-set lines=40
+set columns=157 
+set lines=45
 
 " Tab headings 
 set gtl=%t gtt=%F
