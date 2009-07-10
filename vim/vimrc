@@ -130,13 +130,21 @@ map j gj
 imap <down> <C-o>gj
 map E ge
 
+" Directories *****************************************************************
+" Setup backup location and enable
+set backupdir=~/.backup//
+set backup
+ 
+" Set Swap directory
+set directory=~/.backup//
+
 
 " FuzzyFinder Textmate
-" let g:fuzzy_ignore = "*.log"
-" let g:fuzzy_matching_limit = 70
+let g:fuzzy_ignore = "*.log"
+let g:fuzzy_matching_limit = 70
 
-" map <leader>t :FuzzyFinderTextMate<CR>
-" map <leader>b :FuzzyFinderBuffer<CR>
+map <leader>t :FuzzyFinderTextMate<CR>
+map <leader>b :FuzzyFinderBuffer<CR>
 
 " NERD Tree
 nmap <silent> <Leader>n :NERDTreeToggle<CR>

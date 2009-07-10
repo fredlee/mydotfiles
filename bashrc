@@ -10,7 +10,7 @@ export PATH=/opt/local/bin:/opt/local/jruby/bin:$PATH
 export P4EDITOR="vim"
 export P4CONFIG=~/.p4config
 
-export EDITOR="vim"
+export EDITOR="mate -w"
 
 export HISTCONTROL=erasedups
 export HISTSIZE=10000

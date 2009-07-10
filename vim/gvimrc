@@ -27,7 +27,7 @@ set anti " Antialias font
 "set transparency=0
 
 " Default size of window
-set columns=157 
+set columns=157
 set lines=45
 
 " Tab headings 
