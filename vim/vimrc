@@ -141,7 +141,8 @@ set directory=~/.backup//
 
 " FuzzyFinder Textmate
 let g:fuzzy_ignore = "*.log"
-let g:fuzzy_matching_limit = 70
+let g:fuzzy_matching_limit = 100 
+let g:fuzzy_roots = ['./etc', './ruby', './test'] 
 
 map <leader>t :FuzzyFinderTextMate<CR>
 map <leader>b :FuzzyFinderBuffer<CR>
