@@ -7,6 +7,9 @@
 " |                                                                           |
 " | ,h = new horizontal window                                                |
 " | ,v = new vertical window                                                  |
+" | ,n = toggles NERDTree                                                     |
+" | ,w = open url under the cursor in the default browser                     |
+" | ,t = FuzzyFinder TextMate                                                 |
 " |                                                                           |
 " | enter and shift-enter = adds a new line after and before the current line |
 " |                                                                           |
@@ -143,9 +146,9 @@ set directory=~/.backup//
 let g:fuzzy_ignore = "*.log"
 let g:fuzzy_matching_limit = 100 
 let g:fuzzy_roots = ['./etc', './ruby', './test'] 
-
 map <leader>t :FuzzyFinderTextMate<CR>
 map <leader>b :FuzzyFinderBuffer<CR>
+
 
 " NERD Tree
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
