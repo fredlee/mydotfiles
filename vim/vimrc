@@ -175,3 +175,15 @@ map <Leader>w :call HandleURI()<CR>
 nmap <D-/> ,c<space>
 vmap <D-/> ,c<space>
 imap <D-/> <C-O>,c<space>
+
+
+" bind command-] to shift right
+nmap <D-]> >>
+vmap <D-]> >>
+imap <D-]> <C-O>>>
+
+" bind command-[ to shift left
+nmap <D-[> <<
+vmap <D-[> <<
+imap <D-[> <C-O><<
+
