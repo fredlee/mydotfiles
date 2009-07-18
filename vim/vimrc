@@ -12,6 +12,7 @@
 " | ,t = FuzzyFinder TextMate                                                 |
 " | ,b = FuzzyFinder TextMate your buffer                                     |
 " | ,T = toggles tags list                                                    |
+" | ,F = Ack in Project                                                       |
 " | ,cc = toggles commenting the current line                                 |
 " | cmd+/ = toggles commenting the current line                               |
 " |                                                                           |
@@ -196,4 +197,8 @@ imap <D-]> <C-O>>>
 nmap <D-[> <<
 vmap <D-[> <<
 imap <D-[> <C-O><<
+
+
+" ,F to startup an ack search
+map <leader>F :Ack<space>
 
