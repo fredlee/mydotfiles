@@ -6,7 +6,7 @@
 	excludesfile = ~/.gitignore
 	editor = vim
 [alias]
-  c = commit -m
+  c = commit
   a = add
   di = diff
   dic = diff --cached
@@ -15,6 +15,7 @@
   plre = pull --rebase
   st = status
   out = log origin..HEAD
+  pom = push origin master
 [user]
 	name = Fred Lee
 	email = lee.fred.1@gmail.com
