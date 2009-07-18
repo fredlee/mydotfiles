@@ -1,4 +1,0 @@
-P4PORT=p4d.cashnetusa.com:1666
-P4CLIENT=flee1.artemis
-P4USER=flee1
-P4DIFF=diff -U 3
