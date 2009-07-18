@@ -122,16 +122,6 @@ set clipboard+=unnamed  " Yanks go on clipboard instead.
 set scrolloff=10 " Keep 5 lines below and above the cursor
 
 
-" Cursor Movement *************************************************************
-" Make cursor move by visual lines instead of file lines (when wrapping)
-"map <up> gk
-"map k gk
-"imap <up> <C-o>gk
-"map <down> gj
-"map j gj
-"imap <down> <C-o>gj
-"map E ge
-
 " Directories *****************************************************************
 " Setup backup location and enable
 set backupdir=~/.backup//
