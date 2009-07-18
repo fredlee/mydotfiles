@@ -100,7 +100,7 @@ set ruler
 
 
 " Line Wrapping ***************************************************************
-set nowrap
+set wrap
 set linebreak  " Wrap at word
 
 
