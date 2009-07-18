@@ -21,9 +21,11 @@
 " |                                                                           |
 " -----------------------------------------------------------------------------  
 
-set nocompatible
-
 let mapleader = ","
+set nocompatible
+filetype plugin indent on " Enable filetype-specific indenting and plugins
+set showmatch             "sm:    flashes matching brackets or parentheses
+set smarttab              "sta:   helps with backspacing because of expandtab
 
 
 " Use Ack instead of Grep
@@ -34,7 +36,6 @@ set grepformat=%f:%l:%m
 " Tabs ************************************************************************
 " Use 2 spaces
 set tabstop=2
-set smarttab
 set shiftwidth=2
 set autoindent
 set expandtab
