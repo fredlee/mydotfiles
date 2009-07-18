@@ -10,6 +10,8 @@
 " | ,n = toggles NERDTree                                                     |
 " | ,w = open url under the cursor in the default browser                     |
 " | ,t = FuzzyFinder TextMate                                                 |
+" | ,b = FuzzyFinder TextMate your buffer                                     |
+" | ,T = toggles tags list                                                    |
 " | ,cc = toggles commenting the current line                                 |
 " | cmd+/ = toggles commenting the current line                               |
 " |                                                                           |
@@ -151,6 +153,14 @@ let g:fuzzy_ignore = "*.log"
 let g:fuzzy_roots = ['./etc', './ruby', './test'] 
 map <leader>t :FuzzyFinderTextMate<CR>
 map <leader>b :FuzzyFinderBuffer<CR>
+
+
+" binds ,T to taglist (sorta like textmate apple-shift-t)
+map <leader>T :TlistToggle<CR>
+let Tlist_Show_Menu=1
+let Tlist_GainFocus_On_ToggleOpen=1
+let Tlist_Close_OnSelect=1
+let Tlist_Compact_Format=1
 
 
 " NERD Tree
