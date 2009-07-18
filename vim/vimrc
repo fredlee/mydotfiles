@@ -7,8 +7,9 @@
 " |                                                                           |
 " | ,h = new horizontal window                                                |
 " | ,v = new vertical window                                                  |
+" | ,w = switches to the next window                                          |
 " | ,n = toggles NERDTree                                                     |
-" | ,w = open url under the cursor in the default browser                     |
+" | ,o = open url under the cursor in the default browser                     |
 " | ,t = FuzzyFinder TextMate                                                 |
 " | ,b = FuzzyFinder TextMate your buffer                                     |
 " | ,T = toggles tags list                                                    |
@@ -51,9 +52,13 @@ set numberwidth=4
 set equalalways " Multiple windows, when created, are equal in size
 set splitbelow splitright
 
-"Vertical split then hop to new buffer
-:noremap ,v :vsp^M^W^W<cr>
-:noremap ,h :split^M^W^W<cr>
+" window splitting mappings
+" split vertically with <leader> v
+" split horizontally with <leader> s
+nmap <leader>v :vsplit<CR> <C-w><C-w>
+nmap <leader>s :split<CR> <C-w><C-w>
+" Make it way easier to switch windows (<leader>w)
+nmap <leader>w <C-w><C-w>_
 
 
 " Cursor ***********************************************************
@@ -178,7 +183,7 @@ function! HandleURI()
 	  echo "No URI found in line."
   endif
 endfunction
-map <Leader>w :call HandleURI()<CR>
+map <Leader>o :call HandleURI()<CR>
 
 
 " bind command-/ to toggle comment
