@@ -168,3 +168,10 @@ map <Leader>o :call HandleURI()<CR>
 " ,F to startup an ack search
 map <leader>F :Ack<space>
 
+
+" Navigating Long Lines that Wrap
+" move by display line
+nnoremap k gk
+nnoremap j gj
+nnoremap gk k
+nnoremap gj j
