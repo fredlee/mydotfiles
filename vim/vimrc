@@ -3,21 +3,29 @@
 " |                   (see gvimrc for gui vim settings)                       |
 " |                                                                           |
 " | Some highlights:                                                          |
+" |                                                                           |
 " | jj = <esc>  Very useful for keeping your hands on the home row            |
 " |                                                                           |
 " | ,h = new horizontal window                                                |
 " | ,v = new vertical window                                                  |
 " | ,w = switches to the next window                                          |
+" |                                                                           |
 " | ,n = toggles NERDTree                                                     |
+" |                                                                           |
 " | ,o = open url under the cursor in the default browser                     |
+" |                                                                           |
 " | ,t = FuzzyFinder TextMate                                                 |
 " | ,b = FuzzyFinder TextMate your buffer                                     |
-" | ,T = toggles tags list                                                    |
-" | ,F = Ack in Project                                                       |
-" | ,cc = toggles commenting the current line                                 |
-" | cmd+/ = toggles commenting the current line                               |
 " |                                                                           |
-" | enter and shift-enter = adds a new line after and before the current line |
+" | ,F = Ack in Project                                                       |
+" |                                                                           |
+" | ,T = toggles tags list                                                    |
+" |                                                                           |
+" | ,c<space> = toggles commenting the current line                           |
+" |                                                                           |
+" | "+y = in visual mode, cuts highlighted line to the OSX clipboard          |
+" |                                                                           |
+" | spacebar = toggles highlighted search results after a word search         |
 " |                                                                           |
 " -----------------------------------------------------------------------------  
 
@@ -53,11 +61,9 @@ set numberwidth=4
 " Windows *********************************************************************
 set equalalways " Multiple windows, when created, are equal in size
 set splitbelow splitright
-
-" window splitting mappings
 " split vertically with <leader> v
-" split horizontally with <leader> s
 nmap <leader>v :vsplit<CR> <C-w><C-w>
+" split horizontally with <leader> s
 nmap <leader>s :split<CR> <C-w><C-w>
 " Make it way easier to switch windows (<leader>w)
 nmap <leader>w <C-w><C-w>_
@@ -80,14 +86,8 @@ set hlsearch  " highlight search
 set incsearch  " incremental search, search as you type
 set ignorecase " Ignore case when searching 
 set smartcase " Ignore case when searching lowercase
-
-
 " Press Space to turn off highlighting and clear any message already displayed.
 :noremap <silent> <Space> :silent noh<Bar>echo<CR>
-
-
-" Press F4 to toggle highlighting on/off.
-:noremap <F4> :set hls!<CR>
 
 
 " Colors **********************************************************************
@@ -96,7 +96,7 @@ colorscheme ir_black
 
 " Status Line *****************************************************************
 set showcmd
-set ruler " Show ruler
+set ruler 
 
 
 " Line Wrapping ***************************************************************
@@ -107,12 +107,6 @@ set linebreak  " Wrap at word
 " Mappings ********************************************************************
 " Professor VIM says '87% of users prefer jj over esc', jj abrams strongly disagrees
 imap jj <Esc>
-
-
-" Inser New Line **************************************************************
-map <S-Enter> O<ESC> " awesome, inserts new line without going into insert mode
-map <Enter> o<ESC>
-set fo-=r " do not insert a comment leader after an enter, (no work, fix!!)
 
 
 " Sessions ********************************************************************
@@ -179,24 +173,6 @@ function! HandleURI()
   endif
 endfunction
 map <Leader>o :call HandleURI()<CR>
-
-
-" bind command-/ to toggle comment
-" requires NERD Commenter to be installed: http://www.vim.org/scripts/script.php?script_id=1218
-nmap <D-/> ,c<space>
-vmap <D-/> ,c<space>
-imap <D-/> <C-O>,c<space>
-
-
-" bind command-] to shift right
-nmap <D-]> >>
-vmap <D-]> >>
-imap <D-]> <C-O>>>
-
-" bind command-[ to shift left
-nmap <D-[> <<
-vmap <D-[> <<
-imap <D-[> <C-O><<
 
 
 " ,F to startup an ack search
