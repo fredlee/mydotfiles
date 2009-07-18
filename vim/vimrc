@@ -26,7 +26,8 @@ set nocompatible
 filetype plugin indent on " Enable filetype-specific indenting and plugins
 set showmatch             "sm:    flashes matching brackets or parentheses
 set smarttab              "sta:   helps with backspacing because of expandtab
-
+set cursorline
+syntax on " syntax highlighting
 
 " Use Ack instead of Grep
 set grepprg=ack
@@ -62,10 +63,6 @@ nmap <leader>s :split<CR> <C-w><C-w>
 nmap <leader>w <C-w><C-w>_
 
 
-" Cursor ***********************************************************
-set cursorline
-
-
 "jump to last cursor position when opening a file
 "dont do it when writing a commit log entry
 autocmd BufReadPost * call SetCursorPosition()
@@ -94,11 +91,8 @@ set smartcase " Ignore case when searching lowercase
 
 
 " Colors **********************************************************************
-"set t_Co=256 " 256 colors
 set background=dark 
-syntax on " syntax highlighting
 colorscheme ir_black 
-
 
 " Status Line *****************************************************************
 set showcmd
