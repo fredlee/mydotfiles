@@ -31,3 +31,13 @@ fi
 export TERM=xterm-color
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export CLICOLOR=1 
+
+
+shopt -s checkwinsize # After each command, checks the windows size and changes lines and columns
+
+
+# bash completion settings (actually, these are readline settings)
+bind "set completion-ignore-case on" # note: bind is used instead of setting these in .inputrc.  This ignores case in bash completion
+bind "set bell-style none" # No bell, because it's damn annoying
+bind "set show-all-if-ambiguous On" # this allows you to automatically show completion without double tab-ing
+
