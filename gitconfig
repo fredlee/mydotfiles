@@ -15,7 +15,8 @@
   plre = pull --rebase
   st = status
   out = log origin..HEAD
-  pom = push origin master
+  pushom = push origin master
+  pullom = pull origin master
 [user]
 	name = Fred Lee
 	email = lee.fred.1@gmail.com
