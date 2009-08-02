@@ -21,6 +21,9 @@
 " |                                                                           |
 " | ,T = toggles tags list                                                    |
 " |                                                                           |
+" | ,R = Runs focused Ruby Test::Unit or Rspec                                |
+" | ,r = Runs all the tests in the file                                       |
+" |                                                                           |
 " | ,c<space> = toggles commenting the current line                           |
 " |                                                                           |
 " | "+y = in visual mode, cuts highlighted line to the OSX clipboard          |
@@ -175,3 +178,6 @@ nnoremap k gk
 nnoremap j gj
 nnoremap gk k
 nnoremap gj j
+
+map <Leader>R <Plug>RubyTestRun
+map <Leader>r <Plug>RubyFileRun
