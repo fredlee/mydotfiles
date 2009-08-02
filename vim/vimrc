@@ -30,6 +30,7 @@
 " |                                                                           |
 " | spacebar = toggles highlighted search results after a word search         |
 " |                                                                           |
+" | control + "_" = completes the nearest unclosed tag                        |
 " -----------------------------------------------------------------------------  
 
 let mapleader = ","
