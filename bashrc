@@ -15,7 +15,7 @@ export P4CONFIG=~/.p4config
 
 # Editors
 export EDITOR="mvim"
-export P4EDITOR="mvim"
+export P4EDITOR="mvim -f"
 
 # History
 export HISTCONTROL=erasedups
