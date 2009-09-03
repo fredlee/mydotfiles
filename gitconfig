@@ -4,7 +4,7 @@
 	branch = auto
 [core]
 	excludesfile = ~/.gitignore
-	editor = mvim -f
+	editor = vim
 [alias]
   c = commit
   a = add

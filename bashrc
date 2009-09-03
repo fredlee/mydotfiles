@@ -14,8 +14,8 @@ export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/lib/postgresql83/bin:$PATH
 export P4CONFIG=~/.p4config
 
 # Editors
-export EDITOR="mvim"
-export P4EDITOR="mvim -f"
+export EDITOR="vim"
+export P4EDITOR="vim"
 
 # History
 export HISTCONTROL=erasedups
