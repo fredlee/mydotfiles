@@ -8,7 +8,7 @@ export PS1="$YELLOW_GREY[\w]\$(parse_git_branch)%$WHITE_BLACK "
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} [${PWD}]"; echo -ne "\007"'   
 
 # PATH
-export PATH=/opt/local/bin:/opt/local/jruby/bin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/lib/postgresql83/bin:$PATH
 
 # P4
 export P4CONFIG=~/.p4config
