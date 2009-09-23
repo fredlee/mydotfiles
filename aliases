@@ -9,6 +9,7 @@ alias lla='ls -lah'
 alias ..="cd .."
 alias ...="cd ../.."
 alias p4in="p4 login"
+alias fatjade="ssh fatjade"
 alias p4c="p4 client" 
 alias p4e="p4 edit"
 alias p4o="p4 opened ./..."
