@@ -99,8 +99,10 @@ set background=dark
 colorscheme ir_black 
 
 " Status Line *****************************************************************
-set showcmd
-set ruler 
+set laststatus=2
+set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
+"set showcmd
+"set ruler 
 
 
 " Line Wrapping ***************************************************************
@@ -123,7 +125,7 @@ set number " Show line numbers
 set matchpairs+=<:>
 set vb t_vb= " Turn off the bell, this could be more annoying, but I'm not sure how
 set clipboard+=unnamed  " Yanks go on clipboard instead.
-set scrolloff=10 " Keep 5 lines below and above the cursor
+set scrolloff=10 " Keep 10 lines below and above the cursor
 
 
 " Directories *****************************************************************
@@ -157,16 +159,16 @@ nmap <silent> <Leader>n :NERDTreeToggle<CR>
 
 
 " Open a web-browser with the URL in the current line
-function! HandleURI()
-  let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;]*')
-  echo s:uri
-  if s:uri != ""
-	  exec "!open \"" . s:uri . "\""
-  else
-	  echo "No URI found in line."
-  endif
-endfunction
-map <Leader>o :call HandleURI()<CR>
+"function! HandleURI()
+  "let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;]*')
+  "echo s:uri
+  "if s:uri != ""
+		"exec "!open \"" . s:uri . "\""
+  "else
+		"echo "No URI found in line."
+  "endif
+"endfunction
+"map <Leader>o :call HandleURI()<CR>
 
 
 " ,F to startup an ack search
