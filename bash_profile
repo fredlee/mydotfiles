@@ -24,3 +24,6 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 if [ -f /opt/local/etc/bash_completion ]; then
   . /opt/local/etc/bash_completion
 fi
+
+
+if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi

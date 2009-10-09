@@ -41,3 +41,9 @@ bind "set completion-ignore-case on" # note: bind is used instead of setting the
 bind "set bell-style none" # No bell, because it's damn annoying
 bind "set show-all-if-ambiguous On" # this allows you to automatically show completion without double tab-ing
 
+
+
+if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
+
+
+source /Users/flee1/.profile
