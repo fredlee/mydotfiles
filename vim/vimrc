@@ -39,6 +39,7 @@ filetype plugin indent on " Enable filetype-specific indenting and plugins
 set showmatch             "sm:    flashes matching brackets or parentheses
 set smarttab              "sta:   helps with backspacing because of expandtab
 set cursorline
+set hidden
 syntax on " syntax highlighting
 
 " Use Ack instead of Grep
