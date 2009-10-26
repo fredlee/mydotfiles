@@ -27,3 +27,12 @@ fi
 
 
 if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
+
+##
+# Your previous /Users/flee1/.bash_profile file was backed up as /Users/flee1/.bash_profile.macports-saved_2009-10-23_at_22:45:25
+##
+
+# MacPorts Installer addition on 2009-10-23_at_22:45:25: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
