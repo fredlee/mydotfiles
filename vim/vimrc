@@ -12,17 +12,12 @@
 " |                                                                           |
 " | ,n = toggles NERDTree                                                     |
 " |                                                                           |
-" | ,o = open url under the cursor in the default browser                     |
-" |                                                                           |
 " | ,t = FuzzyFinder TextMate                                                 |
 " | ,b = FuzzyFinder TextMate your buffer                                     |
 " |                                                                           |
 " | ,F = Ack in Project                                                       |
 " |                                                                           |
 " | ,T = toggles tags list                                                    |
-" |                                                                           |
-" | ,R = Runs focused Ruby Test::Unit or Rspec                                |
-" | ,r = Runs all the tests in the file                                       |
 " |                                                                           |
 " | ,c<space> = toggles commenting the current line                           |
 " |                                                                           |
