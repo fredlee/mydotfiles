@@ -6,20 +6,20 @@
 " |                                                                           |
 " | jj = <esc>  Very useful for keeping your hands on the home row            |
 " |                                                                           |
-" | ,h = new horizontal window                                                |
-" | ,v = new vertical window                                                  |
-" | ,w = switches to the next window                                          |
+" | \h = new horizontal window                                                |
+" | \v = new vertical window                                                  |
+" | \w = switches to the next window                                          |
 " |                                                                           |
-" | ,n = toggles NERDTree                                                     |
+" | \n = toggles NERDTree                                                     |
 " |                                                                           |
-" | ,t = FuzzyFinder TextMate                                                 |
-" | ,b = FuzzyFinder TextMate your buffer                                     |
+" | \t = FuzzyFinder TextMate                                                 |
+" | \b = FuzzyFinder TextMate your buffer                                     |
 " |                                                                           |
-" | ,F = Ack in Project                                                       |
+" | \F = Ack in Project                                                       |
 " |                                                                           |
-" | ,T = toggles tags list                                                    |
+" | \T = toggles tags list                                                    |
 " |                                                                           |
-" | ,c<space> = toggles commenting the current line                           |
+" | \c<space> = toggles commenting the current line                           |
 " |                                                                           |
 " | "+y = in visual mode, cuts highlighted line to the OSX clipboard          |
 " |                                                                           |
@@ -28,7 +28,6 @@
 " | control + "_" = completes the nearest unclosed tag                        |
 " -----------------------------------------------------------------------------  
 
-let mapleader = ","
 set nocompatible
 filetype plugin indent on " Enable filetype-specific indenting and plugins
 set showmatch             "sm:    flashes matching brackets or parentheses
