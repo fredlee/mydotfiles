@@ -4,8 +4,8 @@ WHITE_BLACK="\[\e[0m\]"
 # The terminal display - "user[path](gitbranch)$ " where gitbranch only shows up in a git repo
 parse_git_branch(){ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'; }
 # Command Prompt
-export PS1="$YELLOW_GREY[\w]\$(parse_git_branch)%$WHITE_BLACK "
-export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} [${PWD}]"; echo -ne "\007"'   
+export PS1="$YELLOW_GREY[\u.\h: \w]\$(parse_git_branch)%$WHITE_BLACK "
+export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} [${PWD}]"; echo -ne "\007"'
 
 # PATH
 export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/lib/postgresql83/bin:$PATH
@@ -30,7 +30,7 @@ fi
 # Colors
 export TERM=xterm-color
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
-export CLICOLOR=1 
+export CLICOLOR=1
 
 
 shopt -s checkwinsize # After each command, checks the windows size and changes lines and columns
