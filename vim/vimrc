@@ -26,6 +26,15 @@
 " | spacebar = toggles highlighted search results after a word search         |
 " |                                                                           |
 " | control + "_" = completes the nearest unclosed tag                        |
+" |                                                                           |
+" | Autoclosing Characters                                                    |
+" | Typing the opening character will create the closing character and place  |
+" | the cursor in between.                                                    |
+" | Typing the opening character, then hitting return will create the         |
+" | closing character in a new line withe cursor in a new line between the    |
+" | characters.                                                               |
+" | Typing the opening character twice quickly will create only the opening   |
+" | character.                                                                |
 " -----------------------------------------------------------------------------
 
 set nocompatible
@@ -164,4 +173,39 @@ nnoremap k gk
 nnoremap j gj
 nnoremap gk k
 nnoremap gj j
+
+
+" Automatically appends closing characters
+"
+" {}
+inoremap {       {}<Left>
+inoremap {<CR>   {<CR>}<Esc>O
+inoremap {{      {
+inoremap {}      {}
+"
+" []
+inoremap [       []<Left>
+inoremap [<CR>   [<CR>]<Esc>O
+inoremap [[      [
+inoremap []      []
+"
+" ()
+inoremap (       ()<Left>
+inoremap (<CR>   (<CR>)<Esc>O
+inoremap ((      (
+inoremap ()      ()
+"
+" <>
+inoremap <       <><Left>
+inoremap <<CR>   <<CR>><Esc>O
+inoremap <<      <
+inoremap <>      <>
+"
+" Double Quotes
+inoremap "       ""<Left>
+inoremap "<CR>   "<CR>"<Esc>O
+"
+" Single Quotes
+inoremap '       ''<Left>
+inoremap '<CR>   '<CR>'<Esc>O
 
