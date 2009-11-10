@@ -1,4 +1,4 @@
-" -----------------------------------------------------------------------------  
+" -----------------------------------------------------------------------------
 " |                            VIM Settings                                   |
 " |                   (see gvimrc for gui vim settings)                       |
 " |                                                                           |
@@ -26,7 +26,7 @@
 " | spacebar = toggles highlighted search results after a word search         |
 " |                                                                           |
 " | control + "_" = completes the nearest unclosed tag                        |
-" -----------------------------------------------------------------------------  
+" -----------------------------------------------------------------------------
 
 set nocompatible
 filetype plugin indent on " Enable filetype-specific indenting and plugins
@@ -84,21 +84,21 @@ endfunction
 " Searching *******************************************************************
 set hlsearch  " highlight search
 set incsearch  " incremental search, search as you type
-set ignorecase " Ignore case when searching 
+set ignorecase " Ignore case when searching
 set smartcase " Ignore case when searching lowercase
 " Press Space to turn off highlighting and clear any message already displayed.
 :noremap <silent> <Space> :silent noh<Bar>echo<CR>
 
 
 " Colors **********************************************************************
-set background=dark 
-colorscheme ir_black 
+set background=dark
+colorscheme ir_black
 
 " Status Line *****************************************************************
 set laststatus=2
 set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 "set showcmd
-"set ruler 
+"set ruler
 
 
 " Line Wrapping ***************************************************************
@@ -128,16 +128,16 @@ set scrolloff=10 " Keep 10 lines below and above the cursor
 " Setup backup location and enable
 set backupdir=~/.backup//
 set backup
- 
+
 " Set Swap directory
 set directory=~/.backup//
 
 
 " FuzzyFinder Textmate
-let g:fuzzy_matching_limit = 60 
+let g:fuzzy_matching_limit = 60
 let g:fuzzy_ceiling = 20000     " I have some projects with a lot of files...
 let g:fuzzy_ignore = "*.log"
-let g:fuzzy_roots = ['./etc', './ruby', './test'] 
+let g:fuzzy_roots = ['./etc', './ruby', './test']
 map <leader>t :FuzzyFinderTextMate<CR>
 map <leader>b :FuzzyFinderBuffer<CR>
 
@@ -154,19 +154,6 @@ let Tlist_Compact_Format=1
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 
 
-" Open a web-browser with the URL in the current line
-"function! HandleURI()
-  "let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;]*')
-  "echo s:uri
-  "if s:uri != ""
-		"exec "!open \"" . s:uri . "\""
-  "else
-		"echo "No URI found in line."
-  "endif
-"endfunction
-"map <Leader>o :call HandleURI()<CR>
-
-
 " ,F to startup an ack search
 map <leader>F :Ack<space>
 
@@ -178,5 +165,3 @@ nnoremap j gj
 nnoremap gk k
 nnoremap gj j
 
-map <Leader>R <Plug>RubyTestRun
-map <Leader>r <Plug>RubyFileRun
