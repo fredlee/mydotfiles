@@ -60,7 +60,7 @@ set backspace=start,indent,eol
 autocmd FileType make     set noexpandtab
 autocmd FileType python   set noexpandtab
 
-autocmd BufWritePre * :%s/\s\+$//e " Deletes trailing whitespace
+"autocmd BufWritePre * :%s/\s\+$//e " Deletes trailing whitespace
 
 " Scrollbars ******************************************************************
 set sidescrolloff=2
