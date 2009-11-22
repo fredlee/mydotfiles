@@ -1,5 +1,5 @@
 #require 'autotest/growl'
-require 'redgreen/autotest'
+#require 'redgreen/autotest'
 require 'autotest/fsevent'
 
 Autotest.add_hook(:initialize) { |at|
