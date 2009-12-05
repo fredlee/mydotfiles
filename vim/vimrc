@@ -100,7 +100,7 @@ set smartcase " Ignore case when searching lowercase
 
 
 " Colors **********************************************************************
-"set background=dark
+set background=dark
 colorscheme ir_black 
 
 " Status Line *****************************************************************
@@ -146,7 +146,7 @@ set directory=~/.backup//
 let g:fuzzy_matching_limit = 60
 let g:fuzzy_ceiling = 20000     " I have some projects with a lot of files...
 let g:fuzzy_ignore = "*.log"
-let g:fuzzy_roots = ['./etc', './ruby', './test']
+"let g:fuzzy_roots = ['./etc', './ruby', './test']
 map <leader>t :FuzzyFinderTextMate<CR>
 map <leader>b :FuzzyFinderBuffer<CR>
 
@@ -204,8 +204,4 @@ inoremap <>      <>
 " Double Quotes
 inoremap "       ""<Left>
 inoremap "<CR>   "<CR>"<Esc>O
-"
-" Single Quotes
-inoremap '       ''<Left>
-inoremap '<CR>   '<CR>'<Esc>O
 
