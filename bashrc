@@ -8,7 +8,8 @@ export PS1="$YELLOW_GREY[\u.\h:\w]\$(parse_git_branch)%$WHITE_BLACK "
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} [${PWD}]"; echo -ne "\007"'
 
 # PATH
-export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/lib/postgresql83/bin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:/Users/flee1/.gem/ruby/1.9.1/bin:/opt/mongodb-osx-x86_64-1.2.1/bin/:$PATH
+export MANPATH=/opt/local/share/man:$MANPATH
 
 # P4
 export P4CONFIG=~/.p4config
@@ -35,15 +36,8 @@ export CLICOLOR=1
 
 shopt -s checkwinsize # After each command, checks the windows size and changes lines and columns
 
-
 # bash completion settings (actually, these are readline settings)
 bind "set completion-ignore-case on" # note: bind is used instead of setting these in .inputrc.  This ignores case in bash completion
 bind "set bell-style none" # No bell, because it's damn annoying
 bind "set show-all-if-ambiguous On" # this allows you to automatically show completion without double tab-ing
 
-
-
-if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
-
-
-source /Users/flee1/.profile
