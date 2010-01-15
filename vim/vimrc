@@ -205,11 +205,3 @@ inoremap <>      <>
 inoremap "       ""<Left>
 inoremap "<CR>   "<CR>"<Esc>O
 
-
-let g:miniBufExplSplitToEdge = 0
-let g:miniBufExplSplitBelow = 0
-let g:miniBufExplMapWindowNavVim = 1 
-let g:miniBufExplMapWindowNavArrows = 1 
-let g:miniBufExplMapCTabSwitchBufs = 1 
-let g:miniBufExplModSelTarget = 1 
-
