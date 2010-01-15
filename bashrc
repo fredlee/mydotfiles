@@ -8,7 +8,7 @@ export PS1="$YELLOW_GREY[\u.\h:\w]\$(parse_git_branch)%$WHITE_BLACK "
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} [${PWD}]"; echo -ne "\007"'
 
 # PATH
-export PATH=/opt/local/bin:/opt/local/sbin:/Users/flee1/.gem/ruby/1.9.1/bin:/opt/mongodb-osx-x86_64-1.2.1/bin/:$PATH
+export PATH=/opt/ruby-enterprise-1.8.7-2009.10/bin:/opt/local/bin:/opt/local/sbin:/opt/mongodb-osx-x86_64-1.2.1/bin/:$PATH
 export MANPATH=/opt/local/share/man:$MANPATH
 
 # P4
