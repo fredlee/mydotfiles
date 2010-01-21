@@ -1,6 +1,5 @@
-#require 'autotest/growl'
-#require 'redgreen/autotest'
 require 'autotest/fsevent'
+require 'redgreen/autotest'
 
 Autotest.add_hook(:initialize) { |at|
   at.add_exception %r{^\.git}  # ignore Version Control System

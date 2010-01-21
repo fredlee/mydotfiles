@@ -101,7 +101,7 @@ set smartcase " Ignore case when searching lowercase
 
 " Colors **********************************************************************
 set background=dark
-colorscheme ir_black 
+colorscheme ir_black
 
 " Status Line *****************************************************************
 set laststatus=2
