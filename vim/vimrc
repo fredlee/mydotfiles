@@ -6,8 +6,6 @@
 " |                                                                           |
 " | jj = <esc>  Very useful for keeping your hands on the home row            |
 " |                                                                           |
-" | \h = new horizontal window                                                |
-" | \v = new vertical window                                                  |
 " | \w = switches to the next window                                          |
 " |                                                                           |
 " | \n = toggles NERDTree                                                     |
@@ -20,8 +18,6 @@
 " | \T = toggles tags list                                                    |
 " |                                                                           |
 " | \c<space> = toggles commenting the current line                           |
-" |                                                                           |
-" | "+y = in visual mode, cuts highlighted line to the OSX clipboard          |
 " |                                                                           |
 " | spacebar = toggles highlighted search results after a word search         |
 " |                                                                           |
@@ -36,6 +32,8 @@
 " | Typing the opening character twice quickly will create only the opening   |
 " | character.                                                                |
 " -----------------------------------------------------------------------------
+
+call pathogen#runtime_prepend_subdirectories(expand('~/.vim/bundles'))
 
 " resize horzontal split window
 nmap <C-Left> <C-W>-<C-W>-
@@ -68,23 +66,16 @@ set backspace=start,indent,eol
 autocmd FileType make     set noexpandtab
 autocmd FileType python   set noexpandtab
 
-"autocmd BufWritePre * :%s/\s\+$//e " Deletes trailing whitespace
-
 " Scrollbars ******************************************************************
 set sidescrolloff=2
 set numberwidth=4
 
-
 " Windows *********************************************************************
 set equalalways " Multiple windows, when created, are equal in size
 set splitbelow splitright
-" split vertically with <leader> v
-nmap <leader>v :vsplit<CR> <C-w><C-w>
-" split horizontally with <leader> s
-nmap <leader>s :split<CR> <C-w><C-w>
+
 " Make it way easier to switch windows (<leader>w)
 nmap <leader>w <C-w><C-w>_
-
 
 "jump to last cursor position when opening a file
 "dont do it when writing a commit log entry
@@ -97,7 +88,6 @@ function! SetCursorPosition()
   end
 endfunction
 
-
 " Searching *******************************************************************
 set hlsearch  " highlight search
 set incsearch  " incremental search, search as you type
@@ -105,7 +95,6 @@ set ignorecase " Ignore case when searching
 set smartcase " Ignore case when searching lowercase
 " Press Space to turn off highlighting and clear any message already displayed.
 :noremap <silent> <Space> :silent noh<Bar>echo<CR>
-
 
 " Colors **********************************************************************
 set background=dark
@@ -117,29 +106,23 @@ set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 "set showcmd
 "set ruler
 
-
 " Line Wrapping ***************************************************************
 set wrap
 set linebreak  " Wrap at word
-
 
 " Mappings ********************************************************************
 " Professor VIM says '87% of users prefer jj over esc', jj abrams strongly disagrees
 imap jj <Esc>
 
-
 " Sessions ********************************************************************
 " Sets what is saved when you save a session
 set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
-
 
 " Misc ************************************************************************
 set number " Show line numbers
 set matchpairs+=<:>
 set vb t_vb= " Turn off the bell, this could be more annoying, but I'm not sure how
-set clipboard+=unnamed  " Yanks go on clipboard instead.
 set scrolloff=10 " Keep 10 lines below and above the cursor
-
 
 " Directories *****************************************************************
 " Setup backup location and enable
@@ -149,7 +132,6 @@ set backup
 " Set Swap directory
 set directory=~/.backup//
 
-
 " FuzzyFinder Textmate
 let g:fuzzy_matching_limit = 60
 let g:fuzzy_ceiling = 20000     " I have some projects with a lot of files...
@@ -158,7 +140,6 @@ let g:fuzzy_ignore = "*.log"
 map <leader>t :FuzzyFinderTextMate<CR>
 map <leader>b :FuzzyFinderBuffer<CR>
 
-
 " binds ,T to taglist (sorta like textmate apple-shift-t)
 map <leader>T :TlistToggle<CR>
 let Tlist_Show_Menu=1
@@ -166,14 +147,11 @@ let Tlist_GainFocus_On_ToggleOpen=1
 let Tlist_Close_OnSelect=1
 let Tlist_Compact_Format=1
 
-
 " NERD Tree
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 
-
 " ,F to startup an ack search
 map <leader>F :Ack<space>
-
 
 " Navigating Long Lines that Wrap
 " move by display line
@@ -181,7 +159,6 @@ nnoremap k gk
 nnoremap j gj
 nnoremap gk k
 nnoremap gj j
-
 
 " Automatically appends closing characters
 "
