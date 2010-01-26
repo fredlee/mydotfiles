@@ -4,10 +4,6 @@
 " |                                                                           |
 " | Some highlights:                                                          |
 " |                                                                           |
-" | jj = <esc>  Very useful for keeping your hands on the home row            |
-" |                                                                           |
-" | \w = switches to the next window                                          |
-" |                                                                           |
 " | \n = toggles NERDTree                                                     |
 " |                                                                           |
 " | \t = FuzzyFinder TextMate                                                 |
@@ -75,7 +71,7 @@ set equalalways " Multiple windows, when created, are equal in size
 set splitbelow splitright
 
 " Make it way easier to switch windows (<leader>w)
-nmap <leader>w <C-w><C-w>_
+" nmap <leader>w <C-w><C-w>_
 
 "jump to last cursor position when opening a file
 "dont do it when writing a commit log entry
@@ -112,7 +108,7 @@ set linebreak  " Wrap at word
 
 " Mappings ********************************************************************
 " Professor VIM says '87% of users prefer jj over esc', jj abrams strongly disagrees
-imap jj <Esc>
+" imap jj <Esc>
 
 " Sessions ********************************************************************
 " Sets what is saved when you save a session
