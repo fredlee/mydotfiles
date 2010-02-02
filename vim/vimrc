@@ -98,7 +98,12 @@ colorscheme ir_black
 
 " Status Line *****************************************************************
 set laststatus=2
-set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
+"set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
+set statusline+=%F
+set statusline+=[%p%%]
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 "set showcmd
 "set ruler
 
@@ -155,34 +160,4 @@ nnoremap k gk
 nnoremap j gj
 nnoremap gk k
 nnoremap gj j
-
-" Automatically appends closing characters
-"
-" {}
-inoremap {       {}<Left>
-inoremap {<CR>   {<CR>}<Esc>O
-inoremap {{      {
-inoremap {}      {}
-"
-" []
-inoremap [       []<Left>
-inoremap [<CR>   [<CR>]<Esc>O
-inoremap [[      [
-inoremap []      []
-"
-" ()
-inoremap (       ()<Left>
-inoremap (<CR>   (<CR>)<Esc>O
-inoremap ((      (
-inoremap ()      ()
-"
-" <>
-inoremap <       <><Left>
-inoremap <<CR>   <<CR>><Esc>O
-inoremap <<      <
-inoremap <>      <>
-"
-" Double Quotes
-inoremap "       ""<Left>
-inoremap "<CR>   "<CR>"<Esc>O
 
