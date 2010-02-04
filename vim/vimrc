@@ -162,3 +162,4 @@ nnoremap gk k
 nnoremap gj j
 
 set diffopt+=iwhite
+set diffexpr+=
