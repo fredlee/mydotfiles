@@ -161,3 +161,4 @@ nnoremap j gj
 nnoremap gk k
 nnoremap gj j
 
+set diffopt+=iwhite
