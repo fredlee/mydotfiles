@@ -161,5 +161,4 @@ nnoremap j gj
 nnoremap gk k
 nnoremap gj j
 
-set diffopt+=iwhite
-set diffexpr+=""
+map <leader>c :tabe ~/.vim/cheetSheet.txt<CR>
