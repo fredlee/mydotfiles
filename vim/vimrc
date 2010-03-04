@@ -29,16 +29,6 @@
 " | character.                                                                |
 " -----------------------------------------------------------------------------
 
-call pathogen#runtime_prepend_subdirectories(expand('~/.vim/bundles'))
-
-" resize horzontal split window
-nmap <C-Left> <C-W>-<C-W>-
-nmap <C-Right> <C-W>+<C-W>+
-" resize vertical split window
-nmap <C-Up> <C-W>><C-W>>
-nmap <C-Down> <C-W><<C-W><
-
-
 set nocompatible
 filetype plugin indent on " Enable filetype-specific indenting and plugins
 set showmatch             "sm:    flashes matching brackets or parentheses
@@ -94,7 +84,7 @@ set smartcase " Ignore case when searching lowercase
 
 " Colors **********************************************************************
 set background=dark
-colorscheme ir_black 
+colorscheme vividchalk 
 
 " Status Line *****************************************************************
 set laststatus=2
@@ -102,7 +92,6 @@ set laststatus=2
 set statusline+=%F
 set statusline+=[%p%%]
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 "set showcmd
 "set ruler
@@ -112,15 +101,14 @@ set wrap
 set linebreak  " Wrap at word
 
 " Mappings ********************************************************************
-" Professor VIM says '87% of users prefer jj over esc', jj abrams strongly disagrees
-" imap jj <Esc>
+imap jj <Esc>
 
 " Sessions ********************************************************************
 " Sets what is saved when you save a session
 set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
 
 " Misc ************************************************************************
-set number " Show line numbers
+" set number " Show line numbers
 set matchpairs+=<:>
 set vb t_vb= " Turn off the bell, this could be more annoying, but I'm not sure how
 set scrolloff=10 " Keep 10 lines below and above the cursor
