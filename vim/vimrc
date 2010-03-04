@@ -17,6 +17,7 @@ set number
 " Key Mappings
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 imap jj <Esc>
+inoremap <tab> <c-n>
 
 " Search
 set ignorecase
@@ -28,3 +29,7 @@ set statusline+=%F
 set statusline+=[%p%%]
 set statusline+=%*
 set ruler
+
+" NERDTree Preferences
+let NERDTreeShowBookmarks = 1
+let NERDTreeShowHidden = 1
