@@ -13,13 +13,18 @@ colorscheme ir_black
 syntax on
 set cursorline
 set number 
+set equalalways
+set splitbelow splitright
+set scrolloff=2
 
 " Key Mappings
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 imap jj <Esc>
 inoremap <tab> <c-n>
+map <leader>c :tabe ~/.vim/cheetSheet.txt<CR>
 
 " Search
+set incsearch
 set ignorecase
 set smartcase
 
