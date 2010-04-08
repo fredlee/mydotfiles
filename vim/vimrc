@@ -15,7 +15,7 @@ set cursorline
 set number 
 set equalalways
 set splitbelow splitright
-set scrolloff=2
+set scrolloff=8
 
 " Key Mappings
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
