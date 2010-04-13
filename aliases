@@ -5,6 +5,7 @@ alias ll='ls -hla'
 alias ..="cd .."
 alias ...="cd ../.."
 alias cc="cd ~/code/cnuapp"
+alias ew="cd /export/web"
 alias drizzt="ssh drizzt"
 alias zero="ssh zero"
 alias us01="ssh us01"
