@@ -4,6 +4,7 @@ alias ducks='du -cks * | sort -rn|head -11' # Lists the size of all the folders 
 alias ll='ls -hla'
 alias ..="cd .."
 alias ...="cd ../.."
+alias cc="cd ~/code/cnuapp"
 alias drizzt="ssh drizzt"
 alias zero="ssh zero"
 alias us01="ssh us01"
@@ -15,6 +16,7 @@ alias p4r="p4 resolve ./..."
 alias p4ras="p4 resolve -as ./..."
 alias p4d="p4 describe" 
 alias p4s="p4 submit ./..." 
+alias p4ms="p4 monitor show" 
 alias tree="tree -afphugDFC"
 alias screen='TERM=screen screen'
 
