@@ -18,7 +18,6 @@ set splitbelow splitright
 set scrolloff=8
 
 " Key Mappings
-nmap <silent> <Leader>n :NERDTreeToggle<CR>
 imap jj <Esc>
 inoremap <tab> <c-n>
 map <leader>c :tabe ~/.vim/cheetSheet.txt<CR>
@@ -34,10 +33,6 @@ set statusline+=%F
 set statusline+=[%p%%]
 set statusline+=%*
 set ruler
-
-" NERDTree Preferences
-let NERDTreeShowBookmarks = 1
-let NERDTreeShowHidden = 1
 
 "folding settings
 set foldmethod=indent   "fold based on indent
