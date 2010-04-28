@@ -21,6 +21,9 @@ set scrolloff=8
 imap jj <Esc>
 inoremap <tab> <c-n>
 map <leader>c :tabe ~/.vim/cheetSheet.txt<CR>
+nmap <silent> <Leader>n :NERDTreeToggle<CR>
+map <leader>F :Ack<space>
+nmap <leader>w <C-w><C-w>_
 
 " Search
 set incsearch
@@ -44,4 +47,15 @@ set foldlevel=1         "this is just what i use
 set nobackup
 set nowritebackup
 set noswapfile
+
+" Jump to last cursor position when opening a file.
+" Do not do it when writing a commit log entry.
+autocmd BufReadPost * call SetCursorPosition()
+function! SetCursorPosition()
+  if &filetype !~ 'commit\c'
+    if line("'\"") > 0 && line("'\"") <= line("$")
+     exe "normal g`\""
+    endif
+  end
+endfunction
 

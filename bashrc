@@ -15,8 +15,8 @@ export MANPATH=/opt/local/share/man:$MANPATH
 export P4CONFIG=~/.p4config
 
 # Editors
-export EDITOR="vim"
-export P4EDITOR="vim"
+export P4EDITOR='vim'
+export EDITOR='vim'
 
 # History
 export HISTCONTROL=erasedups
