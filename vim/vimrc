@@ -22,6 +22,7 @@ imap jj <Esc>
 inoremap <tab> <c-n>
 map <leader>c :tabe ~/.vim/cheetSheet.txt<CR>
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
+nmap <silent> <Leader>N :NERDTreeFind<CR>
 map <leader>F :Ack<space>
 nmap <leader>w <C-w><C-w>_
 
@@ -47,7 +48,7 @@ set foldlevel=1         "this is just what i use
 set nobackup
 set nowritebackup
 set noswapfile
-set tags=./tags;/
+set tags=~/.tags
 
 " Jump to last cursor position when opening a file.
 " Do not do it when writing a commit log entry.
@@ -60,3 +61,10 @@ function! SetCursorPosition()
   end
 endfunction
 
+" MiniBufExplorer
+let g:miniBufExplSplitBelow=0
+
+" FuzzyFinderTextMate
+map <leader>t :FuzzyFinderTextMate<CR>
+let g:fuzzy_ceiling=50000
+let g:fuzzy_matching_limit=50
