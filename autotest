@@ -1,5 +1,4 @@
 require 'autotest/fsevent'
-require 'redgreen/autotest'
 
 Autotest.add_hook :initialize do |at|
   %w{.svn .hg .git vendor rerun.txt}.each do |exception| 
