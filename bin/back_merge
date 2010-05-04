@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "p4 integrate -r -b cnuapp-stable-$1"
+
+p4 integrate -r -b cnuapp-stable-$1

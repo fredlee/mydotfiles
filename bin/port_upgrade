@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo port selfupdate &&
+sudo port sync &&
+sudo port upgrade outdated
