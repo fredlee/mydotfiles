@@ -13,6 +13,7 @@ if has("gui_macvim")
   set guifont=Menlo\ Bold:h12
   "set guifont=Consolas\ Bold:h12
   colorscheme ir_black 
+  "colorscheme blackboard 
 
   " remove toolbar
   set guioptions-=T  

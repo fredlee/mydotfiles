@@ -10,6 +10,8 @@ set expandtab
 
 " Look and Feel
 colorscheme ir_black 
+"colorscheme blackboard 
+"colorscheme vividchalk 
 syntax on
 set cursorline
 set number 
