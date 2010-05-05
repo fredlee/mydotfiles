@@ -40,8 +40,8 @@ set statusline+=[FORMAT=%{&ff}]
 set statusline+=[TYPE=%Y]
 set statusline+=[POS=%04l,%04v]
 set statusline+=[%p%%]
-"set statusline+=%*
-"set ruler
+set statusline+=%*
+set ruler
 
 " now set it up to change the status line based on mode
 " if version >= 700
