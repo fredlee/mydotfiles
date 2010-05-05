@@ -68,3 +68,10 @@ let g:miniBufExplSplitBelow=0
 map <leader>t :FuzzyFinderTextMate<CR>
 let g:fuzzy_ceiling=50000
 let g:fuzzy_matching_limit=50
+
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+ 
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+
