@@ -43,6 +43,12 @@ set statusline+=[%p%%]
 "set statusline+=%*
 "set ruler
 
+" now set it up to change the status line based on mode
+" if version >= 700
+"   au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
+"   au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
+" endif
+
 " folding settings
 set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
