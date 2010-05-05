@@ -64,12 +64,14 @@ function! SetCursorPosition()
 endfunction
 
 " MiniBufExplorer
-let g:miniBufExplSplitBelow=0
+"let g:miniBufExplSplitBelow=0
 
 " FuzzyFinderTextMate
 map <leader>t :FuzzyFinderTextMate<CR>
 let g:fuzzy_ceiling=50000
 let g:fuzzy_matching_limit=50
+let g:fuzzy_ignore='*.yml;*.sql;*.log;*.sh;*.out;*.png;*.txt;*.csv;*.readme;*.zip;*.tpl'
+let g:fuzzy_roots=[ './cnuapp', './cnuapp_models' ]
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
