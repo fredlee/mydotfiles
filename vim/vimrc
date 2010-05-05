@@ -73,7 +73,7 @@ function! SetCursorPosition()
 endfunction
 
 " MiniBufExplorer
-"let g:miniBufExplSplitBelow=0
+let g:miniBufExplSplitBelow=0
 
 " FuzzyFinderTextMate
 map <leader>t :FuzzyFinderTextMate<CR>
