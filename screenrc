@@ -1,1 +1,3 @@
 hardstatus alwayslastline "%{= wk}%H | %-w%{+u r}%n %t%{= wk}%+w%{= wk}"
+
+bind b eval "writebuf" "exec sh -c 'pbcopy < /tmp/screen-exchange'"
