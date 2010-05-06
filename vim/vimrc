@@ -88,3 +88,8 @@ nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
+" Perforce
+nnoremap @p4a :!p4 add %:e
+nnoremap @p4e :!p4 edit %:e
+nnoremap @p4d :!p4 diff %
+
