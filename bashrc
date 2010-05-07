@@ -8,7 +8,7 @@ export PS1="$YELLOW_GREY[\u.\h:\w]\$(parse_git_branch)%$WHITE_BLACK "
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} [${PWD}]"; echo -ne "\007"'
 
 # PATH
-export PATH=~/bin:/opt/local/bin:/opt/local/sbin:/opt/mongodb-osx-x86_64-1.2.1/bin/:/usr/local/mysql/bin:$PATH
+export PATH=~/bin:/opt/local/bin:/opt/local/sbin:/opt/mongodb-osx-x86_64-1.2.1/bin/:usr/local/mysql/bin:$PATH
 export MANPATH=/opt/local/share/man:$MANPATH
 
 # P4
