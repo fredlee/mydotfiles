@@ -9,9 +9,8 @@ set autoindent
 set expandtab
 
 " Look and Feel
-colorscheme ir_black 
-"colorscheme blackboard 
-"colorscheme vividchalk 
+set t_Co=256
+colorscheme vibrantink 
 syntax on
 set cursorline
 set number 

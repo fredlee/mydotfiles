@@ -12,8 +12,7 @@ if has("gui_macvim")
 
   set guifont=Menlo\ Bold:h12
   "set guifont=Consolas\ Bold:h12
-  colorscheme ir_black 
-  "colorscheme blackboard 
+  colorscheme moria 
 
   " remove toolbar
   set guioptions-=T  
@@ -37,7 +36,7 @@ set anti " Antialias font
 
 " Default size of window
 set columns=100
-set lines=58
+set lines=30
 
 " Tab headings 
 set gtl=%t gtt=%F
