@@ -73,6 +73,7 @@ endfunction
 
 " MiniBufExplorer
 let g:miniBufExplSplitBelow=0
+let g:bufExplorerSortBy = "name"
 
 " FuzzyFinderTextMate
 map <leader>t :FuzzyFinderTextMate<CR>
