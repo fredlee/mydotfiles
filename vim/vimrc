@@ -9,8 +9,8 @@ set autoindent
 set expandtab
 
 " Look and Feel
-set t_Co=256
-colorscheme vibrantink 
+" set t_Co=256
+colorscheme ir_black 
 syntax on
 set cursorline
 set number 
@@ -20,6 +20,7 @@ set scrolloff=8
 
 " Key Mappings
 imap jj <Esc>
+inoremap <tab> <c-n>
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 nmap <silent> <Leader>N :NERDTreeFind<CR>
 map <leader>F :Ack<space>
