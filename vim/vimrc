@@ -63,10 +63,6 @@ function! SetCursorPosition()
   end
 endfunction
 
-" MiniBufExplorer
-let g:miniBufExplSplitBelow=0
-let g:bufExplorerSortBy = "name"
-
 " FuzzyFinderTextMate
 map <leader>t :FuzzyFinderTextMate<CR>
 let g:fuzzy_ceiling=50000
