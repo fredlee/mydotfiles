@@ -10,13 +10,14 @@ set expandtab
 
 " Look and Feel
 " set t_Co=256
-colorscheme ir_black 
+colorscheme ir_black
 syntax on
 set cursorline
 set number 
 set equalalways
 set splitbelow splitright
 set scrolloff=8
+set backspace=indent,eol,start
 
 " Key Mappings
 imap jj <Esc>
