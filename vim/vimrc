@@ -9,8 +9,8 @@ set autoindent
 set expandtab
 
 " Look and Feel
-set t_Co=256
-colorscheme molokai 
+" set t_Co=256
+colorscheme ir_black 
 syntax on
 set cursorline
 set number 
