@@ -43,3 +43,7 @@ bind "set show-all-if-ambiguous On" # this allows you to automatically show comp
 
 if [[ -s /Users/flee1/.rvm/scripts/rvm ]] ; then source /Users/flee1/.rvm/scripts/rvm ; fi
 
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+

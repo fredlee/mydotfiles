@@ -10,8 +10,8 @@ if has("gui_macvim")
   " fullscreen options (MacVim only), resized window when changed to fullscreen
   set fuoptions=maxvert,maxhorz 
 
-  set guifont=Menlo\ Bold:h12
-  "set guifont=Consolas\ Bold:h12
+  "set guifont=Menlo\ Bold:h12
+  set guifont=Consolas\ Bold:h12
   colorscheme ir_black 
 
   " remove toolbar
