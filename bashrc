@@ -42,6 +42,7 @@ bind "set bell-style none" # No bell, because it's damn annoying
 bind "set show-all-if-ambiguous On" # this allows you to automatically show completion without double tab-ing
 
 if [[ -s /Users/flee1/.rvm/scripts/rvm ]] ; then source /Users/flee1/.rvm/scripts/rvm ; fi
+[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
