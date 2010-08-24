@@ -9,8 +9,10 @@ export PS1="$YELLOW_GREY[\w]\$(parse_git_branch) >$WHITE_BLACK "
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} [${PWD}]"; echo -ne "\007"'
 
 # PATH
-export PATH=~/bin:usr/local/mysql/bin:$PATH
+export PATH=~/bin:/usr/local/mysql/bin:$PATH
 export MANPATH=$MANPATH
+
+#export ARCHFLAGS='-arch x86_64'
 
 # P4
 export P4CONFIG=~/.p4config
