@@ -22,4 +22,7 @@ alias p4s="p4 submit ./..."
 alias p4ms="p4 monitor show" 
 alias tree="tree -afphugDFC"
 alias screen='TERM=screen screen'
+alias start_pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias stop_pg='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+alias tail_pg='tail -f /usr/local/var/postgres/server.log'
 
