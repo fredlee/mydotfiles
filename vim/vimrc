@@ -10,7 +10,13 @@ set expandtab
 
 " Look and Feel
 " set t_Co=256
-colorscheme ir_black 
+if &diff
+  set background=dark
+  colorscheme peaksea
+else
+  colorscheme ir_black 
+endif
+
 syntax on
 set cursorline
 set number 
