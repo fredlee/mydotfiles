@@ -98,3 +98,7 @@ function ToggleOverLengthHi()
   endif
 endfunction"
 
+" MiniBufExplorer"
+let g:miniBufExplSplitBelow = 0
+let g:miniBufExplMaxSize = 1
+let g:miniBufExplModSelTarget = 1
