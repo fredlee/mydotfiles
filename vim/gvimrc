@@ -11,7 +11,7 @@ if has("gui_macvim")
   set fuoptions=maxvert,maxhorz 
 
   "set guifont=Menlo\ Bold:h12
-  set guifont=Consolas\ Bold:h12
+  set guifont=Consolas\ Bold:h13
   colorscheme ir_black 
 
   " remove toolbar
