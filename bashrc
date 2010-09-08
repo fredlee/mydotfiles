@@ -20,8 +20,9 @@ export P4CONFIG=~/.p4config
 # Editors
 export P4EDITOR='vim'
 export EDITOR='vim'
+export VIM_APP_DIR=/usr/local/Cellar/macvim/HEAD
 
-# History
+ #History
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
 shopt -s histappend
