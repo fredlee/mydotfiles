@@ -32,6 +32,7 @@ nmap <silent> <Leader>n :NERDTreeToggle<CR>
 nmap <silent> <Leader>N :NERDTreeFind<CR>
 map <leader>F :Ack<space>
 nmap <leader>w <C-w><C-w>_
+map <Leader>b :TMiniBufExplorer<cr>
 
 " Search
 set incsearch

@@ -6,10 +6,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias cc="cd ~/code/cnuapp"
 alias ew="cd /export/web"
-alias drizzt="ssh -X drizzt"
-alias freeze="ssh -X cnuapp@freeze.dev"
-alias us01="ssh us01"
-alias uk01="ssh uk01"
 alias p4c="p4 client" 
 alias p4o="p4 opened ./..."
 alias p4ch="p4 changes -L ./..."
@@ -20,7 +16,13 @@ alias p4s="p4 submit ./..."
 alias p4ms="p4 monitor show" 
 alias tree="tree -afphugDFC"
 alias screen='TERM=screen screen'
+
 alias start_pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias stop_pg='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias tail_pg='tail -f /usr/local/var/postgres/server.log'
 
+alias drizzt="ssh -X drizzt"
+alias freeze="ssh -X cnuapp@freeze.dev"
+alias us01="ssh us01"
+alias uk01="ssh uk01"
+alias chelsea="ssh flee1@us3rd01.obr"
