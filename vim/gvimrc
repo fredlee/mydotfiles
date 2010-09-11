@@ -40,3 +40,5 @@ set lines=30
 
 " Tab headings 
 set gtl=%t gtt=%F
+
+set scrolloff=8
