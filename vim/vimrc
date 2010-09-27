@@ -14,7 +14,7 @@ if &diff
   set background=dark
   colorscheme peaksea
 else
-  colorscheme molokai 
+  colorscheme ir_black 
 endif
 
 syntax on
