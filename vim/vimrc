@@ -9,13 +9,13 @@ set autoindent
 set expandtab
 
 " Look and Feel
-" set t_Co=256
+set t_Co=256
 if &diff
   set background=dark
   colorscheme peaksea
 else
   set background=dark
-  colorscheme ir_black 
+  colorscheme molokai 
 endif
 
 syntax on
