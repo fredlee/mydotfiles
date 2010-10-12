@@ -1,6 +1,0 @@
-#!/bin/bash
-
-echo "Creating sym links.\n"
-
-ln -s ackrc ~/.ackrc
-
