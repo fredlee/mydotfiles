@@ -35,7 +35,7 @@ map <leader>F :Ack<space>
 map <Leader>b :TMiniBufExplorer<CR>
 map <Leader>t :FuzzyFinderTextMate<CR>
 
-let g:fuzzy_roots=["cnuapp","cnuapp_models"]
+let g:fuzzy_roots=["cnuapp/db", "cnuapp/etc", "cnuapp/gems", "cnuapp/ruby", "cnuapp_models"]
 let g:fuzzy_ceiling=13000
 
 " Search
