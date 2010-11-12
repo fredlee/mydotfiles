@@ -32,6 +32,8 @@ if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
 fi
 
+export TERM=rxvt
+
 # Colors
 # export TERM=xterm-color
 # export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
