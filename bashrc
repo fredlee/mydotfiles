@@ -5,11 +5,12 @@ WHITE_BLACK="\[\e[0m\]"
 parse_git_branch(){ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'; }
 # Command Prompt
 # export PS1="$YELLOW_GREY[\u.\h:\w]\$(parse_git_branch)>$WHITE_BLACK "
+# export PS1="$YELLOW_GREY\$(~/.rvm/bin/rvm-prompt v g)[\w]\$(parse_git_branch) >$WHITE_BLACK "
 export PS1="$YELLOW_GREY[\w]\$(parse_git_branch) >$WHITE_BLACK "
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} [${PWD}]"; echo -ne "\007"'
 
 # PATH
-export PATH=~/bin:/usr/local/mysql/bin:$PATH
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/bin:/usr/sbin:/bin:/sbin:
 export MANPATH=$MANPATH
 
 #export ARCHFLAGS='-arch x86_64'
