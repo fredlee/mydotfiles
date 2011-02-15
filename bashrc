@@ -33,7 +33,7 @@ if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
 fi
 
-export TERM=rxvt
+export TERM=xterm-256color
 
 # Colors
 # export TERM=xterm-color

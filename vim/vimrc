@@ -11,21 +11,24 @@ set expandtab
 " Look and Feel
 set t_Co=256
 if &diff
-  set background=dark
+  " set background=dark
   colorscheme peaksea
 else
-  set background=dark
-  colorscheme ir_black
+  " set background=dark
+  colorscheme wombat256
 endif
 
 syntax on
 set cursorline
-set number 
+" set number 
 set equalalways
 set splitbelow splitright
 set scrolloff=8
 set backspace=indent,eol,start
 set shortmess+=I
+set clipboard=unnamed
+set nopaste
+" set spell
 
 " Key Mappings
 imap jj <Esc>
