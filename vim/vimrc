@@ -15,7 +15,7 @@ if &diff
   colorscheme peaksea
 else
   " set background=dark
-  colorscheme wombat256
+  colorscheme vibrantink 
 endif
 
 syntax on
