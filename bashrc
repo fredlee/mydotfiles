@@ -33,11 +33,9 @@ if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
 fi
 
-export TERM=xterm-256color
-
 # Colors
-# export TERM=xterm-color
 # export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+export TERM=xterm-256color
 export CLICOLOR=1
 
 shopt -s checkwinsize # After each command, checks the windows size and changes lines and columns
