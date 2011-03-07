@@ -4,13 +4,11 @@ WHITE_BLACK="\[\e[0m\]"
 # The terminal display - "user[path](gitbranch)$ " where gitbranch only shows up in a git repo
 parse_git_branch(){ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'; }
 # Command Prompt
-# export PS1="$YELLOW_GREY[\u.\h:\w]\$(parse_git_branch)>$WHITE_BLACK "
-# export PS1="$YELLOW_GREY\$(~/.rvm/bin/rvm-prompt v g)[\w]\$(parse_git_branch) >$WHITE_BLACK "
 export PS1="$YELLOW_GREY[\w]\$(parse_git_branch) >$WHITE_BLACK "
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} [${PWD}]"; echo -ne "\007"'
 
 # PATH
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/bin:/usr/sbin:/bin:/sbin:
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/bin:/usr/sbin:/bin:/sbin
 export MANPATH=$MANPATH
 
 #export ARCHFLAGS='-arch x86_64'
@@ -45,8 +43,7 @@ bind "set completion-ignore-case on" # note: bind is used instead of setting the
 bind "set bell-style none" # No bell, because it's damn annoying
 bind "set show-all-if-ambiguous On" # this allows you to automatically show completion without double tab-ing
 
-if [[ -s /Users/flee1/.rvm/scripts/rvm ]] ; then source /Users/flee1/.rvm/scripts/rvm ; fi
-[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion

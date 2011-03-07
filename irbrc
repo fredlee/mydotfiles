@@ -1,5 +1,7 @@
 require 'rubygems'
-#require 'interactive_editor'
+require 'irb/completion'
+require 'irb/ext/save-history'
+require 'interactive_editor'
 
 # Automatic Indentation
 IRB.conf[:AUTO_INDENT] = true
@@ -8,7 +10,6 @@ IRB.conf[:AUTO_INDENT] = true
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
 # Save History between irb sessions
-require 'irb/ext/save-history'
-IRB.conf[:SAVE_HISTORY] = 100
+IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-save-history"
 
