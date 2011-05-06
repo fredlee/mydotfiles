@@ -21,10 +21,11 @@ export P4EDITOR='vim'
 export EDITOR='vim'
 export VIM_APP_DIR=/usr/local/Cellar/macvim/HEAD
 
- #History
+# History
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
-shopt -s histappend
+export PROMPT_COMMAND='history -a'
+# shopt -s histappend
 
 # aliases
 if [ -e "$HOME/.aliases" ]; then

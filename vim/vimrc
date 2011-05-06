@@ -1,4 +1,3 @@
-filetype off
 filetype plugin indent on
 
 " Tabs
@@ -21,9 +20,9 @@ set t_Co=256
 
 syntax on
 set background=dark
-colorscheme solarized
+colorscheme railscasts
 set cursorline
-set number
+"set number
 set equalalways
 set splitbelow splitright
 set scrolloff=8
