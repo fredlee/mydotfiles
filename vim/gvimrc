@@ -12,9 +12,10 @@ if has("gui_macvim")
 
   " set guifont=Menlo\ Bold:h12
   " set guifont=Menlo:h12
+  set guifont=Inconsolata:h13
   " set guifont=Consolas\ Bold:h12
-  set guifont=Consolas:h12
-  colorscheme railscasts
+  " set guifont=Consolas:h12
+  colorscheme ir_black
 
   " remove toolbar
   set guioptions-=T  
