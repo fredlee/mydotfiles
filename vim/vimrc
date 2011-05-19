@@ -68,3 +68,9 @@ function! SetCursorPosition()
   end
 endfunction
 
+" FuzzyFinderTextMate
+let g:fuzzy_ceiling = 10000
+let g:fuzzy_ignore = "*.log"
+""let g:fuzzy_path_display = 'full'
+map <leader>t :FuzzyFinderTextMate<CR>
+map <leader>b :FuzzyFinderBuffer<CR>
