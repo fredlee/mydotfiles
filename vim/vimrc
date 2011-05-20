@@ -74,3 +74,6 @@ let g:fuzzy_ignore = "*.log"
 ""let g:fuzzy_path_display = 'full'
 map <leader>t :FuzzyFinderTextMate<CR>
 map <leader>b :FuzzyFinderBuffer<CR>
+
+" F5 to remove trailing white space
+nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
