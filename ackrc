@@ -2,5 +2,5 @@
 --color
 --follow
 --group
---all
 --ignore-dir=log
+--nojs
