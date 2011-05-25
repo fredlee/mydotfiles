@@ -1,4 +1,49 @@
-bin/vim
-* v.7.2
-* Compiled for Linux.
+Vim has been segfaulting, hanging, and crashing for me on Snow Leopard lately. 
+
+Here is my setup:
+* OS X 10.6.7
+* RVM installed
+* MacVim installed via Homebrew
+* Vim 7.2 or 7.3 compiled by me.
+* The Ruby interpretor is turned on.
+
+After tons of yak shaving, I think I've figured out a process to make Vim 7.3 and
+MacVim 7.3, with the Ruby interpreter turned on, and Command-T work. Test it
+please.
+
+RVM
+===
+
+1. Configure RVM to use the system Ruby from Snow Leopard.
+
+    % rvm use system
+
+MacVim
+======
+
+1. Remove previous installation of MacVim. If you have MacVim installed via 
+Brew:
+
+    % brew uninstall macvim
+
+2. Install MacVim from a pre-compiled binary for Snow Leopard. Get it here.
+
+    % http://github.com/downloads/b4winckler/macvim/MacVim-7_3-53.tbz
+
+3. Install Command-T per instructions. Use the MacVim you just installed. Make 
+sure that you are still using the system Ruby, not anything from RVM.
+
+Vim 7.3
+=======
+
+1. Configure
+
+    % ./configure --prefix=$HOME --enable-multibyte --enable-rubyinterp --enable-gui=no --disable-gpm
+
+2. Make, and Install 
+
+    % make test
+    % make
+    % make install
+
 
