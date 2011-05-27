@@ -15,7 +15,7 @@ if has("gui_macvim")
   " set guifont=Inconsolata:h13
   " set guifont=Consolas\ Bold:h12
   set guifont=Consolas:h13
-  colorscheme ir_black
+  colorscheme solarized
 
   " remove toolbar
   set guioptions-=T  

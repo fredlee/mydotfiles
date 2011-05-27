@@ -10,13 +10,8 @@ set expandtab
 " Color 
 set t_Co=256
 syntax on
+set background=dark
 colorscheme solarized
-
-if has('gui_running')
-  set background=light
-else
-  set background=dark
-endif
 
 " Look and Feel
 set cursorline
@@ -39,11 +34,13 @@ nmap <silent> <Leader>n :NERDTreeToggle<CR>
 nmap <silent> <Leader>N :NERDTreeFind<CR>
 map <leader>F :Ack<space>
 nnoremap <leader><leader> <c-^>
+nnoremap <leader>h :set hlsearch!<CR>
 
 " Search
 " set incsearch
 set ignorecase
 set smartcase
+set hlsearch
 
 " Status Line
 set laststatus=2
@@ -85,6 +82,7 @@ nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 " Command-T
 let g:CommandTMaxFiles=20000
+let g:CommandTMatchWindowAtTop=1
 
 set wildignore+=README
 set wildignore+=Rakefile
