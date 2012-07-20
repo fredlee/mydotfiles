@@ -1,5 +1,0 @@
-#!/bin/bash
-txtred=$(tput setaf 1)    # Red
-txtrst=$(tput sgr0)       # Text reset
-echo -e "${txtred}psql cnuapp_prod -h slavedb.cashnetusa.com -U flee1 -W${txtrst}"
-psql cnuapp_prod -h slavedb.cashnetusa.com -U flee1 -W
