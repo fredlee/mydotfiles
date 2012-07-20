@@ -1,21 +1,22 @@
 filetype plugin indent on
 
 " Tabs
-set tabstop=2
-set smarttab
-set shiftwidth=2
-set autoindent
 set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set smarttab
+set autoindent
 
 " Color 
 set t_Co=256
 syntax on
-set background=light
-colorscheme solarized
+set background=dark
+colorscheme Tomorrow-Night
 
 " Look and Feel
 set cursorline
-set number
+" set number
 set equalalways
 set splitbelow splitright
 set scrolloff=8
@@ -23,6 +24,7 @@ set backspace=indent,eol,start
 set shortmess+=I
 set clipboard=unnamed
 set nopaste
+set cmdheight=2
 
 " Make tab completion for files/buffers act like bash"
 set wildmenu
@@ -37,7 +39,7 @@ nnoremap <leader><leader> <c-^>
 nnoremap <leader>h :set hlsearch!<CR>
 
 " Search
-" set incsearch
+set incsearch
 set ignorecase
 set smartcase
 set hlsearch
@@ -139,3 +141,7 @@ set wildignore+=sol_api/**
 set wildignore+=trick_serial/**
 set wildignore+=waffles/**
 set wildignore+=wtf/**
+
+" Vim Notes
+let g:notes_directory = '~/Dropbox/Notes'
+let g:notes_suffix = '.txt'

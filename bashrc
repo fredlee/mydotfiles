@@ -1,5 +1,5 @@
 # Bash Prompt
-source ~/code/mydotfiles/git-completion.sh
+source ~/Dropbox/Home/code/mydotfiles/git-completion.sh
 
 function __git_dirty {
   git diff --quiet HEAD &>/dev/null
@@ -73,9 +73,7 @@ export MANPATH=$MANPATH
 export P4CONFIG=~/.p4config
 
 # Editors
-export P4EDITOR='vim'
 export EDITOR='vim'
-export VIM_APP_DIR=/usr/local/Cellar/macvim/HEAD
 
 # History
 export HISTCONTROL=erasedups
@@ -100,9 +98,10 @@ bind "set completion-ignore-case on" # note: bind is used instead of setting the
 bind "set bell-style none" # No bell, because it's damn annoying
 bind "set show-all-if-ambiguous On" # this allows you to automatically show completion without double tab-ing
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
