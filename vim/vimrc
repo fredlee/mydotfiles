@@ -12,11 +12,11 @@ set autoindent
 set t_Co=256
 syntax on
 set background=dark
-colorscheme Tomorrow-Night
+colorscheme solarized
 
 " Look and Feel
 set cursorline
-" set number
+set number
 set equalalways
 set splitbelow splitright
 set scrolloff=8
@@ -85,62 +85,6 @@ nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 " Command-T
 let g:CommandTMaxFiles=20000
 let g:CommandTMatchWindowAtTop=1
-
-set wildignore+=README
-set wildignore+=Rakefile
-set wildignore+=cnu_gems/**
-set wildignore+=cabar/**
-set wildignore+=cnu_bloom/**
-set wildignore+=cnu_brand/**
-set wildignore+=cnu_cluster/**
-set wildignore+=cnu_config/**
-set wildignore+=cnu_content/**
-set wildignore+=cnu_cucumber/**
-set wildignore+=cnu_database/**
-set wildignore+=cnu_gems/**
-set wildignore+=cnu_httpd/**
-set wildignore+=cnu_ivr/**
-set wildignore+=cnu_ldap/**
-set wildignore+=cnu_locale/**
-set wildignore+=cnu_logger/**
-set wildignore+=cnu_memcache/**
-set wildignore+=cnu_multivariate/**
-set wildignore+=cnu_perf/**
-set wildignore+=cnu_pg/**
-set wildignore+=cnu_product_offering/**
-set wildignore+=cnu_rails_app/**
-set wildignore+=cnu_regexp/**
-set wildignore+=cnu_ruby_build/**
-set wildignore+=cnu_ruby_core/**
-set wildignore+=cnu_ruby_lib/**
-set wildignore+=cnu_sass/**
-set wildignore+=cnu_scm/**
-set wildignore+=cnu_selenium/**
-set wildignore+=cnu_service/**
-set wildignore+=cnu_space/**
-set wildignore+=cnu_test/**
-set wildignore+=cnuapp/apache/**
-set wildignore+=cnuapp_ci/**
-set wildignore+=cnuapp_doc/**
-set wildignore+=cnuapp_env/**
-set wildignore+=cnuapp_qa/**
-set wildignore+=cnuapp_rack/**
-set wildignore+=contenter_api/**
-set wildignore+=cookbooks/**
-set wildignore+=db_global/**
-set wildignore+=doc/**
-set wildignore+=enf_app/**
-set wildignore+=enf_log/**
-set wildignore+=lsws-3.3.14/**
-set wildignore+=mod_rails/**
-set wildignore+=rails-1.2/**
-set wildignore+=red_steak/**
-set wildignore+=repo.yml*
-set wildignore+=shout_trace/**
-set wildignore+=sol_api/**
-set wildignore+=trick_serial/**
-set wildignore+=waffles/**
-set wildignore+=wtf/**
 
 " Vim Notes
 let g:notes_directory = '~/Dropbox/Notes'

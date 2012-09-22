@@ -55,7 +55,6 @@ bash_prompt() {
   local UC=$W                 # user's color
   [ $UID -eq "0" ] && UC=$R   # root's color
 
-  # PS1="$Y\h$W:$EMY\w $B\$(__my_rvm_ruby_version)\$(__git_branch)$EMY\$(__git_dirty)${NONE} % "
   PS1="$Y\h$W:$EMY\w$B\$(__git_branch)${NONE} % "
 }
 
@@ -64,7 +63,7 @@ unset bash_prompt
 # END Bash Prompt
 
 # PATH
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/bin:/usr/sbin:/bin:/sbin
+export PATH=/Applications/Postgres.app/Contents/MacOS/bin:~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
 export MANPATH=$MANPATH
 
 #export ARCHFLAGS='-arch x86_64'
