@@ -1,5 +1,5 @@
 # Bash Prompt
-source ~/Dropbox/Home/code/mydotfiles/git-completion.sh
+source ~/code/mydotfiles/git-completion.sh
 
 function __git_dirty {
   git diff --quiet HEAD &>/dev/null
