@@ -4,8 +4,6 @@ filetype plugin indent on
 " NERDTree                     
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 let g:NERDTreeDirArrows=0      
-autocmd vimenter * NERDTree    
-autocmd vimenter * if !argc() | NERDTree | endif 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Tabs
