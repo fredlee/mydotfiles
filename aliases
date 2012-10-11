@@ -7,7 +7,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias tree="tree -afphugDFC"
 
-alias start_pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias stop_pg='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
-alias tail_pg='tail -f /usr/local/var/postgres/server.log'
-
+alias vu="vagrant up"
+alias vh="vagrant halt"
+alias vst="vagrant status"
+alias vssh="vagrant ssh"
