@@ -1,4 +1,12 @@
-filetype plugin indent on
+call pathogen#infect()         
+filetype plugin indent on      
+
+" NERDTree                     
+nmap <silent> <Leader>n :NERDTreeToggle<CR>
+let g:NERDTreeDirArrows=0      
+autocmd vimenter * NERDTree    
+autocmd vimenter * if !argc() | NERDTree | endif 
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Tabs
 set expandtab
@@ -19,7 +27,7 @@ set cursorline
 set number
 set equalalways
 set splitbelow splitright
-" set scrolloff=8
+set scrolloff=4
 set backspace=indent,eol,start
 set shortmess+=I
 set clipboard=unnamed
@@ -32,8 +40,6 @@ set wildmenu
 " Key Mappings
 imap jj <Esc>
 inoremap <tab> <c-n>
-nmap <silent> <Leader>n :NERDTreeToggle<CR>
-nmap <silent> <Leader>N :NERDTreeFind<CR>
 map <leader>F :Ack<space>
 nnoremap <leader><leader> <c-^>
 nnoremap <leader>h :set hlsearch!<CR>
@@ -78,13 +84,6 @@ function! SetCursorPosition()
     endif
   end
 endfunction
-
-" F5 to remove trailing white space
-nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
-
-" Command-T
-let g:CommandTMaxFiles=20000
-let g:CommandTMatchWindowAtTop=1
 
 " Vim Notes
 let g:notes_directory = '~/Dropbox/Notes'
