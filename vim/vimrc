@@ -12,14 +12,14 @@ set autoindent
 set t_Co=256
 syntax on
 set background=dark
-colorscheme Tomorrow-Night-Bright 
+colorscheme Tomorrow-Night
 
 " Look and Feel
 set cursorline
 set number
 set equalalways
 set splitbelow splitright
-set scrolloff=8
+" set scrolloff=8
 set backspace=indent,eol,start
 set shortmess+=I
 set clipboard=unnamed
