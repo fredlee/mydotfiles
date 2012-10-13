@@ -18,7 +18,7 @@ set autoindent
 set t_Co=256
 syntax on
 set background=dark
-colorscheme Tomorrow-Night
+colorscheme Tomorrow-Night-Bright
 
 " Look and Feel
 set cursorline
@@ -30,7 +30,7 @@ set backspace=indent,eol,start
 set shortmess+=I
 set clipboard=unnamed
 set nopaste
-set cmdheight=2
+set cmdheight=1
 
 " Make tab completion for files/buffers act like bash"
 set wildmenu
