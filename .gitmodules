@@ -1,0 +1,7 @@
+[submodule "vim/bundle/nerdtree"]
+  path = vim/bundle/nerdtree
+  url  = git://github.com/scrooloose/nerdtree.git
+
+[submodule "vim/bundle/ZoomWin"]
+  path = "vim/bundle/ZoomWin"
+  url  = git://github.com/vim-scripts/ZoomWin.git
