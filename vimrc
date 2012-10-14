@@ -6,6 +6,10 @@ nmap <silent> <Leader>n :NERDTreeToggle<CR>
 let g:NERDTreeDirArrows=0      
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+" Ack.vim
+" for Linux
+" let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
 " Tabs
 set expandtab
 set tabstop=2
